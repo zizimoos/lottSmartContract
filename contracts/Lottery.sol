@@ -19,7 +19,7 @@ contract Lottery {
     uint256 internal constant BET_AMOUNT = 5 * 10**15;
     uint256 private _pot;
 
-    bool private mode = false;
+    bool private mode = false; // false: test mode, true: real mode
 
     enum BlockStatus {Checkable, NotRevealed, BlockLimitPassed}
     enum BettingResult {Fail, Win, Draw}
