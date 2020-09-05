@@ -56,7 +56,34 @@ contract("Lottery", function ([deployer, user1, user2]) {
     });
   });
 
-  describe.only("isMatch", function () {
+  describe('Distribute', function(){
+     describe('When the answer is checkable', function(){
+       it("should give the user the pot when the answer matches", async () =>{
+          // 두 글자 다 맞을 때
+          // betAndDistribute
+          // betAndDistribute
+          // betAndDistribute
+
+          // pot의 변화량 확인
+
+          // user(winner)의 밸런스 확인
+       });
+       it("should give the user the amount he or her bet when a single character matches", async () =>{
+         // 한 글자 맞았을때
+       });
+       it("should get the eth of user when the answer does not matches at all", async () =>{
+         // 두 글자 모두 틀렸을 때 
+       });
+    });
+   describe('When the answer is not revealed(not mined)', function(){
+      
+    });
+   describe('When the answer is not revealed(block limit is passed)', function(){
+      
+    });
+  });
+
+  describe("isMatch", function () {
     let blockHash =
       "0xab98e92841b25739971d9ef4cc10ea8bc04ca521a30454bbfa0fc55ef1ada1b7";
     it("should be bettingResult.win when two characters match", async () => {
